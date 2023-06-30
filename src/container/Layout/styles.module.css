@@ -1,0 +1,53 @@
+.container {
+	padding: 0px 100px;
+}
+
+.topbar{
+	min-height: 40px;
+	background-color: var(--favoland-main);;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+.topbar h2 a{
+	color: #fff;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.topbar h2 a:hover{
+text-decoration: underline;
+
+}
+
+@media screen and (max-width: 500px) {
+	.topbar h2 a{
+		font-weight: 500;
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.container {
+		padding: 0px 80px;
+	}	
+	
+}
+
+@media screen and (max-width: 900px) {
+	.container {
+		padding: 0px 60px;
+	}
+}
+@media screen and (max-width: 650px) {
+	.container {
+		padding: 0px 60px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.container {
+		padding: 0px 20px;
+	}
+}

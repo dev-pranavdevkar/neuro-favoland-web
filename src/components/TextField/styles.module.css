@@ -1,0 +1,23 @@
+.textField {
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+	margin: 20px 0px;
+}
+
+.label {
+	color: var(--favoland-sec);
+	margin-bottom: 5px;
+}
+
+.input {
+	padding: 10px 10px;
+	background: rgb(239, 239, 239);
+    border: none;
+}
+
+.input:focus,
+.input:focus-visible,
+.input:active {
+	outline: 1px solid var(--favoland-main);
+}

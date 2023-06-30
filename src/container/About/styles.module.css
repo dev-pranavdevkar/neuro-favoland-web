@@ -1,0 +1,22 @@
+.container {
+	padding: 0px 100px;
+}
+
+.row {
+	margin-top: 50px;
+	flex-direction: column;
+}
+.p {
+	max-width: 40rem;
+}
+
+@media screen and (max-width: 650px) {
+	.container {
+		padding: 0px 60px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.container {
+		padding: 0px 50px;
+	}
+}

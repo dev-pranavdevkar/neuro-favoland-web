@@ -1,0 +1,37 @@
+.footer {
+	padding: 60px 0px;
+	justify-content: space-between;
+}
+.footer ul li {
+	color: var(--favoland-sec);
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+.footer ul li:hover {
+	color: var(--favoland-main);
+}
+.footer ul {
+	text-decoration: none;
+	list-style: none;
+	color: var(--favoland-sec);
+	margin: 10px 10px;
+}
+
+.socialIcons {
+	display: flex;
+}
+.icon {
+	font-size: 1.4rem;
+	margin: 5px;
+	cursor: pointer;
+	color: var(--favoland-sec);
+}
+.icon:hover {
+	color: var(--favoland-main);
+}
+
+.copyright {
+	padding: 30px 0px;
+	color: var(--favoland-sec);
+	font-weight: 700;
+}
