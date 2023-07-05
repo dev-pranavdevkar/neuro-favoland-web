@@ -10,8 +10,8 @@ export default function IngredientsCard(props) {
 	return (
 		<>
 			<div className={styles.card} hoverable style={{ padding: 0 }}>
-				<h3>{name}</h3>
-				<p>{productCount} Products</p>
+				<h3 className='productName'>{name}</h3>
+				<p className='product-desc'>{productCount} Products</p>
 			</div>
 		</>
 	);

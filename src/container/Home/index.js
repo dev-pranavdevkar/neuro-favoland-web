@@ -5,10 +5,12 @@ import HeroSection from './HeroSection';
 import Ingredients from './Ingredients';
 import Products from './Products';
 import TopDeals from './TopDeals';
+import Brands from './Brands';
 //Styles
 import styles from './styles.module.css';
 //Next Auth
 import { getSession } from 'next-auth/react';
+import FAQ from './FAQ';
 
 export default function Home() {
 	return (
@@ -22,8 +24,11 @@ export default function Home() {
 			<hr />
 			<TopDeals />
 			<hr />
-			{/* <Brands /> */}
+			<Brands />
 			<hr />
+			<FAQ />
+			<hr />
+			
 			<Footer />
 		</div>
 	);

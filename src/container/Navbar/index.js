@@ -1,10 +1,10 @@
 import { useState } from 'react';
 //Nextjs components
-import Image from 'next/image';
+// Import Image from 'next/image';
 import Link from 'next/link';
 
 //Ant design
-import { Button, Col, Popover, Row } from 'antd';
+import {  Col, Popover, Row } from 'antd';
 
 //Styles
 import styles from './styles.module.css';
@@ -23,6 +23,11 @@ const menu = [
 	{ id: 6, label: 'Body', name: 'body' },
 	{ id: 7, label: 'Brands', name: 'brands' },
 ];
+// Const options = [
+// 	{ value: 'option1', label: 'Option 1' },
+// 	{ value: 'option2', label: 'Option 2' },
+// 	{ value: 'option3', label: 'Option 3' },
+// ];
 
 import { searchProduct } from '@/src/redux/slices/searchSlice';
 import SearchedProdcuts from '../Home/SearchedProduct';
@@ -57,74 +62,38 @@ export default function Navbar(props) {
 
 	const content = (
 		<div
-			className="flex flex-col space-y-1 w-24"
-			style={{
-				backgroundColor: 'white',
-				display: 'flex',
-				flexDirection: 'column',
-				alignItems: 'center',
-				width: 100,
-			}}
+			className="flex flex-col space-y-3 w-24"
+		
 		>
+			
 			<Link href="/profile">
-				<div
-					style={{
-						paddingBottom: 8,
-						backgroundColor: 'white',
-						border: 'none',
-						borderBottom: '2px solid #000',
-						width: '80%',
-					}}
-				>
-					<p
-						style={{
-							color: 'black',
-							fontWeight: 'bold',
-							cursor: 'pointer',
-						}}
-					>
+				<div>
+					<p>
 						Profile
 					</p>
 				</div>
 			</Link>
 
 			<Link href="/favouriteproducts">
-				<div
-					style={{
-						paddingTop: 8,
-						paddingBottom: 8,
-						backgroundColor: 'white',
-						border: 'none',
-						borderBottom: '2px solid #000',
-						width: '80%',
-					}}
-				>
-					<p
-						style={{
-							fontWeight: 'bold',
-							cursor: 'pointer',
-							color: 'black',
-						}}
-					>
+				<div>
+					<p>
 						Favourite
 					</p>
 				</div>
 			</Link>
-			<Button
+			<Link href="#!" onClick={() => {handleOk();}}>
+				<div>
+					<p>
+					Logout
+					</p>
+				</div>
+			</Link>
+			{/* <Button 
 				onClick={() => {
 					handleOk();
-				}}
-				style={{
-					paddingTop: 5,
-					backgroundColor: 'white',
-					border: 'none',
-					cursor: 'pointer',
-					fontWeight: 'bold',
-					color: 'red',
-				}}
-			>
+				}}>
 				Logout
-			</Button>
+			</Button> */}
 		</div>
 	);
 
@@ -132,22 +101,81 @@ export default function Navbar(props) {
 		<Row className={styles.header}>
 			<Row className={styles.navbar}>
 				<Link href="/">
-					<Image
-						src="/images/logo.svg"
-						alt="favoland logo"
-						width={200}
-						height={100}
-					/>
+					<img src="/images/logo.svg" alt="favoland logo" />
 				</Link>
 
 				<Col className={styles.actionbtn}>
+					{status === 'authenticated' && (
+						<Link className="navbar-link pe-2" href={'#!'}r>
+							Recommended
+						</Link>
+					)}
+					{status === 'authenticated' && (
+						<Link className="navbar-link pe-2" href={'#!'}r>
+							Favorites
+						</Link>
+					)}
+
+					{status === 'authenticated' && (
+						<Link className="navbar-link pe-2" href={'#!'}r>
+							Wishlist
+						</Link>
+					)}
+
+					{status === 'authenticated' && (
+						<Link className="navbar-link pe-2" href={'#!'}r>
+							Deals
+						</Link>
+					)}
+
+					<Link className="navbar-link pe-2" href={'/about'}>
+						About Us
+					</Link>
+					<Link className="navbar-link pe-2" href={'/team'}>
+						Team
+					</Link>
+
+					{status === 'authenticated' && (
+						<Link className="navbar-link pe-2" href={'#!'}r>
+							Notifications
+						</Link>
+					)}
+						{status === 'authenticated' && (
+						<Link className="navbar-link pe-2" href={'#!'}r>
+							Messages
+						</Link>
+					)}
+							{status === 'authenticated' && (
+						<Link className="navbar-link pe-2" href={'#!'}r>
+							Settings
+						</Link>
+					)}
+					<Link
+						className="navbar-link pe-2"
+						href={'https://sellers.favoland.com/'}
+					>
+						Retailer
+					</Link>
 					{status !== 'authenticated' && (
-						<Link className={styles.signin} href={'/signup'}>
+						<Link className="navbar-link pe-2" href={'/signup'}r>
 							Sign in
 						</Link>
 					)}
 
+					{/* <Link className="navbar-link" href={'/signup'}>
+<button type="button" class="btn btn-primary scan-product-btn">Scan Product</button>
+					</Link> */}
 					{/* <ButtonOutline title="Scan product" /> */}
+
+					{status !== 'authenticated' && (
+						
+							<Link className="navbar-link pe-2" href={'/signup'}>
+								<button type="button" class="btn btn-primary signUp-btn">
+									Sign Up
+								</button>
+							
+						</Link>
+					)}
 					<ScanditModal />
 
 					{status === 'authenticated' ? (
@@ -155,16 +183,16 @@ export default function Navbar(props) {
 					) : (
 						<ButtonFilled title="Sign up" link="/signup" />
 					)}
-					{status === 'authenticated' && (
+					{/* {status === 'authenticated' && (
 						<h3 style={{ marginLeft: 30 }}>{session?.user?.name}</h3>
-					)}
+					)} */}
 					{status === 'authenticated' && (
 						<Popover content={content} title="" trigger="click">
 							<img
 								className={styles.profilepicture}
 								src={session?.user?.image}
-								width={50}
-								height={50}
+								width={48}
+								height={48}
 							/>
 						</Popover>
 					)}
@@ -176,7 +204,6 @@ export default function Navbar(props) {
 					<Category label={'All cagtegories'} />
 				</Col>
 				<Col className={styles.searchProduct}>
-					{/* <Category label={'Search products, brands'} /> */}
 					<input
 						type="text"
 						placeholder="Search for Products, Services "
@@ -203,7 +230,7 @@ export default function Navbar(props) {
 				</Row>
 			</Col>
 
-			<Row>
+			<Row className="">
 				<Col className={styles.divider}></Col>
 			</Row>
 			{searchToaggle && <SearchedProdcuts searchResult={searchResult} />}

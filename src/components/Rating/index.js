@@ -12,6 +12,7 @@ const Rating = () => {
 	return (
 		<span>
 			<Rate
+				
 				tooltips={desc}
 				onChange={setValue}
 				value={value}

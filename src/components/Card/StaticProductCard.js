@@ -21,18 +21,16 @@ export default function StaticProductsCard(props) {
 					<Image
 						src={images}
 						alt={name}
-						sizes="100vw"
-						width={290}
-						height={290}
+						sizes="100vw" width={290} height={290}
 					/>
-					<h3>{name}</h3>
+					<h3 className='productName'>{name}</h3>
 					<Rating rating={rating} />
 					<Text className={styles.price}>({rating})</Text>
 
 					<div>
 						{/* <Text className={styles.text}>$</Text> */}
-						<Text className={styles.price}>{price}</Text>
-						<Text className={styles.text}>onwards</Text>
+						<Text className="product-desc"> $<b className='text-dark'>{price}</b> </Text>
+						<Text className="product-desc"> onwards</Text>
 					</div>
 				</div>
 			</Link>

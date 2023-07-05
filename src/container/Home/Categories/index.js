@@ -14,37 +14,37 @@ import styles from './styles.module.css';
 const categories = [
 	{
 		id: 1,
-		image: '/images/products/product1.png',
+		image: '/images/products/product2.png',
 		name: 'Skincare',
 		productCount: '245',
 	},
 	{
 		id: 2,
-		image: '/images/products/product2.png',
+		image: '/images/products/product6.png',
 		productCount: '245',
 		name: 'Haircare',
 	},
 	{
 		id: 3,
-		image: '/images/products/product3.png',
+		image: '/images/products/product9.png',
 		productCount: '245',
 		name: 'Tools ',
 	},
 	{
 		id: 4,
-		image: '/images/products/product4.png',
+		image: '/images/products/product10.png',
 		productCount: '245',
 		name: 'Fragrance',
 	},
 	{
 		id: 5,
-		image: '/images/products/product5.png',
+		image: '/images/products/product11.png',
 		productCount: '245',
 		name: 'Brushes',
 	},
 	{
 		id: 6,
-		image: '/images/products/product6.png',
+		image: '/images/products/product12.png',
 		productCount: '245',
 		name: 'Makeup',
 	},
@@ -53,11 +53,11 @@ export default function Categories() {
 	return (
 		<>
 			
-			<h2 className={styles.h2}>Shop by categories</h2>
+			<h2 className="section-title">Shop by categories</h2>
 			<Row className="mt-2">
 				{categories.map((item) => {
 					return (
-						<Col key={item.id}>
+						<Col span={4} key={item.id}>
 							<CategoriesCard
 								image={item.image}
 								productCount={item.productCount}
@@ -67,12 +67,29 @@ export default function Categories() {
 					);
 				})}
 
+
 				<Col span={24} className={styles.viewallContainer}>
 					<Link className={styles.viewall} href={'#'}>
 						View All
 					</Link>
 				</Col>
 			</Row>
+
+			
+			{/* <div className='row' key={item.id}>
+				{categories.map((item) => { 
+					<div className='col-lg-2'>
+						
+							<CategoriesCard
+								image={item.image}
+								productCount={item.productCount}
+								name={item.name}
+							/>
+						
+					
+					</div>
+					})}
+				</div> */}
 		</>
 	);
 }

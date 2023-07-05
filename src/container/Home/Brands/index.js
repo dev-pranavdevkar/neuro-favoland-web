@@ -88,7 +88,7 @@ const categories = [
 export default function Brands() {
 	return (
 		<>
-			<h2 className={styles.h2}>Shop by Brands</h2>
+			<h2 className="section-title">Shop by Brands</h2>
 			<Row className="mt-2">
 				{categories?.map((item) => {
 					return (

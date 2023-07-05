@@ -13,10 +13,12 @@
 }
 
 .price {
-	font-size: 1.2rem;
-	font-weight: 700;
-	margin-right: 10px;
-	font-family: var(--favoland-font);
+	color: var(--212121, #212121);
+	font-size: 16px;
+	font-family: Jost;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
 }
 
 .text {

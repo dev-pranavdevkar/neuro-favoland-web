@@ -25,7 +25,8 @@ export default function ScanditModal() {
 
 	return (
 		<>
-			<ButtonFilled title="Scan Product" onclick={showModal} />
+			<button type="button" class="btn btn-primary signUp-btn" onclick={showModal}>Scan Product</button>
+			{/* <ButtonFilled title="Scan Product" onclick={showModal} /> */}
 			<Modal open={open} footer={null}>
 				<Scanner />
 				<div className={styles.modalFooter}>

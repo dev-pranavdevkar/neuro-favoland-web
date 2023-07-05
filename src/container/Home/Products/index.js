@@ -18,16 +18,19 @@ export default function Products() {
 	useEffect(() => {
 		dispatch(fetchAllProducts());
 	}, []);
+
 	const allProducts = useSelector((state) => state.productReducer.allProducts);
 
 	return (
 		<>
-			<h2>Popular products</h2>
-			<Row className="mt-2">
+			<div className="mtn-600">
+				<hr />
+				<h2 className="section-title">Popular products</h2>
+				{/* <Row className="mt-2">
 				{allProducts.statusCode !== 404 ? (
 					allProducts?.map((item) => {
 						return (
-							<Col key={item._id}>
+							<Col  key={item._id}>
 								<ProductsCard
 									productId={item._id}
 									images={item.images[0]}
@@ -47,7 +50,30 @@ export default function Products() {
 						View All
 					</Link>
 				</Col>
-			</Row>
+				</Row> */}
+
+				<Row justify="space-between" className="mt-2">
+					{allProducts.map((item) => {
+						return (
+							<Col span={6} key={item.id}>
+								<ProductsCard
+									productId={item._id}
+									images={item.images[0]}
+									rating={255}
+									price={item.price}
+									name={item.name}
+								/>
+							</Col>
+						);
+					})}
+
+					<Col span={24} className={styles.viewallContainer}>
+						<Link className={styles.viewall} href={'#'}>
+							View All
+						</Link>
+					</Col>
+				</Row>
+			</div>
 		</>
 	);
 }

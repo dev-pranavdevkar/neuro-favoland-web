@@ -35,11 +35,11 @@ export default function Cagetgory() {
 	return (
 		<Row className={styles.row}>
 			<button
-				className={styles.dropdown}
+				className={styles.dropdown } 
 				onClick={handleDropdown}
 				onMouseEnter={handleMouseEnter}
 			>
-				{/* {label} */}
+		
 				{query.categoryName ? query.categoryName : 'All cagtegories'}
 				<CaretDownOutlined />
 			</button>

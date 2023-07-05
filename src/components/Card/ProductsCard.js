@@ -1,5 +1,5 @@
 //Nextjs Components
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 
 //Ant Design
@@ -18,24 +18,31 @@ export default function ProductsCard(props) {
 		<>
 			<Link href={`/products/${productId}`} className={styles.link}>
 				<div className={styles.card} hoverable style={{ padding: 0 }}>
-					<Image
+					<img
 						src={images}
 						alt={name}
-						sizes="100vw"
-						width={290}
-						height={290}
+						sizes="100vw" width={290} height={290}
+					
 					/>
-					<h3>{name}</h3>
-					<Rating rating={rating} />
+					<h3 className='productName'>{name}</h3>
+					<Rating className={styles.price}  rating={rating} />
 					<Text className={styles.price}>({rating})</Text>
 
 					<div>
-						{/* <Text className={styles.text}>$</Text> */}
-						<Text className={styles.price}>{price}</Text>
-						<Text className={styles.text}>onwards</Text>
+					
+						<Text className={styles.price}>$<b>{price} </b></Text>
+						<Text className={styles.text}> onwards</Text>
 					</div>
 				</div>
 			</Link>
+			{/* <>
+			<div className={styles.card} hoverable style={{ padding: 0 }}>
+				<Image src={images} alt={name} sizes="100vw" width={180} height={180} />
+				<h3>{name}</h3>
+
+				<p>{name} Products</p>
+			</div>
+		</> */}
 		</>
 	);
 }

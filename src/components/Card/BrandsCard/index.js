@@ -12,8 +12,8 @@ export default function BrandsCard(props) {
 		<>
 			<div className={styles.card} hoverable style={{ padding: 0 }}>
 				<Image src={image} alt={name} sizes="100vw" width={180} height={24} />
-				<h3 className={styles.name}>{name}</h3>
-				<p>{productCount} Products</p>
+				<h3 className="productName">{name}</h3>
+				<p className="product-desc"> {productCount} Products</p>
 			</div>
 		</>
 	);

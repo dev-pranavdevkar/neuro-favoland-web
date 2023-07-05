@@ -76,16 +76,15 @@ const ingredient = [
 export default function Ingredients() {
 	return (
 		<>
-			<h2 className={styles.h2}>Shop by ingredients</h2>
-			<Row className="mt-2">
+			<h2 className="section-title">Shop by ingredients</h2>
+			<Row className="mt-2" >
 				{ingredient.map((item) => {
 					return (
-						<Col key={item.id}>
+						<Col span={4} key={item.id}>
 							<IngredientsCard
 								image={item.image}
 								productCount={item.productCount}
-								name={item.name}
-							/>
+								name={item.name} />
 						</Col>
 					);
 				})}
