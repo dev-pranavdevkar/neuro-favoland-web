@@ -1,0 +1,76 @@
+.categoriesDropDown {
+	background-color: #e5e1e1;
+	border: 1px solid #e5e1e1;
+	padding: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+/* dropdown */
+
+.dropdown {
+	position: relative;
+	all: unset;
+	background-color: #e5e1e1;
+	border: 1px solid #e5e1e1;
+	padding: 12px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	
+	text-transform: capitalize;
+	font-size: 18px;
+font-family: Jost;
+font-style: normal;
+font-weight: 400;
+line-height: 100%;
+}
+
+.menu {
+	position: absolute;
+	background-color: white;
+	list-style-type: none;
+	margin: 40px 0;
+	padding: 5px;
+	z-index: 10;
+	border: 1px solid rgb(223, 220, 220);
+	width: 99%;
+}
+
+.menu > li {
+	margin: 0;
+
+	background-color: white;
+}
+
+.menu > li:hover {
+	background-color: var(--favoland-main);
+}
+
+.menu > li > button {
+	width: 100%;
+	height: 100%;
+	text-align: left;
+
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 5px;
+	margin: 0;
+	font: inherit;
+	cursor: pointer;
+}
+
+.menuItem {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: #000;
+}
+
+.menuItem:hover {
+	background-color: var(--favoland-main);
+	color: #fff;
+}

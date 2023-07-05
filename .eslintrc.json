@@ -1,0 +1,25 @@
+{
+	"extends": ["eslint:recommended", "next/core-web-vitals", "next"],
+	"plugins": ["prettier"],
+	"rules": {
+		
+		// "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		// "prettier/prettier": [0, { "useTabs": true }],
+		// "indent": ["warn", "tab"],
+		// "eqeqeq": ["error", "always"],
+		// "no-duplicate-imports": ["error", { "includeExports": true }],
+		// "no-console": "error",
+		// "prefer-const": "error",
+		// "no-sparse-arrays": "error",
+		// "camelcase": "error",
+		// "capitalized-comments": [
+		// 	"error",
+		// 	"always",
+		// 	{
+		// 		"ignorePattern": "pragma|ignored",
+		// 		"ignoreInlineComments": true
+		// 	}
+		// ]
+	}
+}
+// 

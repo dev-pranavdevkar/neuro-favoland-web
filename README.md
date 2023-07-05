@@ -1,92 +1,139 @@
-# favoland-web
+# Favoland
 
+## Favoland NextJs Frontend
 
+Favoland is a personalized beauty recommendation and lead generation platform that focuses on people allergies, religious beliefs, and preferences.
 
-## Getting started
+---
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Table of contents
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- [Description](#Description)
+- [How To Use](#How-to-use)
+- [Branching Strategy](#Branching-strategy)
+- [References](#References)
+- [Route Info](#Router-and-its-files)
 
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/neuromonks/favoland-web.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/neuromonks/favoland-web/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
+---
 
 ## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+#### Technologies
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+- NextJs (version 13.1.2)
+- Antd (version 5.1.5)
+- Redux ToolKit
+- GitLab CI/CD
+- Visual Studio (Use latest one)
+- Git (version 2.25.1)
+- Git Bash (For window only)
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+[Back to the top](#Favoland)
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+---
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## How To Use
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+#### Installation
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+First clone repo from gitLab by run this command -
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+```bash
+git clone https://gitlab.com/favoland/favoland-web.git
+```
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Now open Visual Studio and go to backend repo -
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+```bash
+cd favoland-web
+```
 
-## License
-For open source projects, say how it is licensed.
+Now install all the dependencies -
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+```bash
+npm i
+
+#or
+yarn install
+```
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+#### Getting Started
+
+- Make sure in your code `.env` file is located. If not, then request to code access provider to provide `.env` file
+
+  - Make sure `GOOGLE_SECRET_KEY` variable in this file.
+
+  - Make sure `FACEBOOK_SECRET_KEY` variables in this file.
+
+- Now start project -
+
+```bash
+yarn dev
+#or
+npm dev
+```
+
+- [Back to top](#Favoland)
+
+---
+
+## Branching Strategy
+
+In here Favoland beauty recommendation, we practise using Git Flow workflow. Git Flow is a workflow design on how we should manage our releases and features.
+
+Glossary:
+
+- local -> your local repository
+- origin -> your forked repository
+- upstream -> main repository
+
+Generally, we have `prod`,`dev` and `staging` as for our core branches.
+
+When a developer work on a new feature, he should create a `local/feature` branch (e.g local/feature/continueWithFacebook). He will then push it to its `origin/feature` branch and submit a MR (Merge Request) from `origin/feature` for review. After the feature has been fully developed and tested, it can now merge into the `staging` branch, CD (Continuous Deployment) will listen and automatically deploy to our test server when there is new changes to this branch. During this period of time whenever we discovered a bug we should create a `fix` branch and MR point to the `staging`. Once the `staging` branch is stabilized, we can now merge `staging` into `preprod` and it should be treated as `production grade` quality, CD will be triggered and deploy it to our staging server. (The transition of this period must be quick or otherwise `staging` will keep stacking more features indefinitely and causing it to be dangerous and harder to merge into `preprod`). Finally, maintaner will create a new tag (kindly follow semver [read semver](https://semver.org/) and deploy it to `prod`! Anything urgent or production issue but no breaking fix `MUST` create a `hotfix` branch and go directly to the `prepord/prod` branch. If your fix requires testing/potentially consists of breaking please point it to `staging` instead.
+
+Here is one of a good reference for you to understand further on the Git Flow workflow - [click here](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+
+[Back to the top](#Favoland)
+
+---
+
+### Best Pracices
+
+We need to be united, we have to talk in a same language, and so some of the founadamental coding styles have to be consistent. Here are some of the reading meterials for your infomation. Be a good prgrammer with OCD! `PLEASE TAKE IT SERIOUSLY!`
+
+For JavaScript style guide, we follow Airbnb, you can read the style guide here - [click here](https://github.com/airbnb/javascript)
+
+Understading a technology design pattern is incredibly important as it will guide you through a more detailed picture in the philosophy of the technology itself, so you don't develop an application that is "just works", but an application that is "flawless". "it works" mentality shouldn't exists in a prgrammer's cognitive as it will hurt the project in a long run with an abundance of technical debts.
+
+You should think like a robot, don't put assumption or bias while designing/developing a feature, Knowing how to writecodes that is "just works" is mere a "coder". A good "programmer" should be capable of designing a beautiful piece of agnostic architecture and writing a consistent and indestructiable codes.
+
+[Back to the top](#Favoland)
+
+---
+
+## Router and its files Structure
+
+#### 1. Pages
+
+     All the routes name define inside the pages folder. The name of the file becomes the name of the router name in nextjs.
+
+#### 2.Src
+
+- Src has components, constant, container and lib folder.
+
+  - components
+    components has the individual UI components that make up the app will live in here.
+  - constant
+    constant contains the images and json data.
+  - container
+    container combines all the components and logic which required to render the page.
+  - lib
+    All Business/app/domain logic will live in here

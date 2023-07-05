@@ -1,0 +1,38 @@
+.heroSection {
+	margin-top: 20px;
+	justify-content: space-between;
+	padding-top: 50px;
+}
+.text {
+	font-size: 2.5rem;
+	font-weight: 700;
+	word-spacing: 3px;
+}
+.paragraph {
+	font-size: 1.18rem;
+	font-weight: 500;
+	word-spacing: 2px;
+}
+.signup {
+	color: #fff;
+	font-size: 1.1em;
+	background-color: var(--favoland-sec);
+	border: 2px solid var(--favoland-sec);
+	padding: 5px 10px;
+}
+.signup:hover {
+	background-color: var(--favoland-main);
+	border: 2px solid var(--favoland-main);
+	color: #fff;
+}
+.imageSection {
+	margin-top: 20px;
+	position: relative;
+	height: 55vh;
+}
+
+@media screen and (max-width: 700) {
+	.imageSection {
+		height: 45vh;
+	}
+}
