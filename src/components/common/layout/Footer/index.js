@@ -2,13 +2,9 @@
 import {
 	FacebookFilled,
 	InstagramOutlined,
+	LinkedinFilled,
 	TwitterSquareFilled,
-	LinkedinFilled
-
 } from '@ant-design/icons';
-
-
-
 
 import { Row } from 'antd';
 
@@ -21,7 +17,6 @@ import styles from './styles.module.css';
 export default function Footer() {
 	return (
 		<>
-		
 			<Row className={styles.footer}>
 				{/* <ul>
 					<li>Recommended</li>
@@ -31,7 +26,7 @@ export default function Footer() {
 					<li>Favorites</li>
 					<li>Wishlist</li>
 				</ul> */}
-				
+
 				<ul>
 					{/* <li>Notifications</li> */}
 					<Link href="/profile">
@@ -47,7 +42,6 @@ export default function Footer() {
 					<Link href="/contact">
 						<li>Wishlist</li>
 					</Link>
-				
 				</ul>
 				<ul>
 					<Link href="/terms">
@@ -83,13 +77,18 @@ export default function Footer() {
 					</Link>
 				</ul>
 				<ul className={styles.socialIcons}>
-					<FacebookFilled className={styles.icon} />
-
-					<InstagramOutlined className={styles.icon} />
-
-					<TwitterSquareFilled className={styles.icon} />
-
-					<LinkedinFilled className={styles.icon} />
+					<a href="https://www.facebook.com/Favolandbeauty">
+						<FacebookFilled className={styles.icon} />
+					</a>
+					<a href="https://www.instagram.com/favo.land/">
+						<InstagramOutlined className={styles.icon} />
+					</a>
+					<a href="https://twitter.com/Favoland">
+						<TwitterSquareFilled className={styles.icon} />
+					</a>
+					<a href="https://www.linkedin.com/company/favoland/">
+						<LinkedinFilled className={styles.icon} />
+					</a>
 				</ul>
 			</Row>
 			<Row className={styles.copyright}>©2021 Favoland</Row>

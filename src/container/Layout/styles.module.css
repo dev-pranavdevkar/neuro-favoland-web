@@ -3,7 +3,7 @@
 }
 
 .topbar{
-	min-height: 40px;
+	min-height: 50px;
 	background-color: var(--favoland-main);;
 	text-align: center;
 	display: flex;
@@ -16,6 +16,7 @@
 	color: #fff;
 	cursor: pointer;
 	font-weight: 600;
+	font-size: 1.2rem;
 }
 
 .topbar h2 a:hover{

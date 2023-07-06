@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row } from 'antd';
 
 //Components
-import Footer from '@/src/components/common/layout/Footer';
+// import Footer from '@/src/components/common/layout/Footer';
 
 function About() {
 	const about1 = 'images/Favoland/about/about1.png';
@@ -14,7 +14,7 @@ function About() {
 	const about5 = 'images/Favoland/about/about5.png';
 
 	return (
-		<div className={styles.container}>
+		<div >
 			<div className="about-page">
 				<Row className={styles.row}>
 					<div className="page-head">
@@ -342,9 +342,7 @@ function About() {
 					beauty industry.
 				</p> */}
 				</Row>
-				<div className='mtn-400' >
-					<Footer />
-				</div>
+			
 			</div>
 		</div>
 	);

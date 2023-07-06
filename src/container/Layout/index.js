@@ -14,7 +14,7 @@ function LayoutDashboard() {
 
 	return (
 		<Layout className="m-0 p-0" style={{ background: '#fff' }}>
-			{/* <div className={styles.topbar}>
+			<div className={styles.topbar}>
 				<h2>
 					<a
 						href="https://share.hsforms.com/1a5k6i_zETqeyWx1eAVv_8Ad82qy"
@@ -25,7 +25,7 @@ function LayoutDashboard() {
 						notified when we launch
 					</a>
 				</h2>
-			</div> */}
+			</div>
 			<div className={styles.container}>
 				<Topbar />
 				<Navbar status={status} session={session} signOut={signOut} />

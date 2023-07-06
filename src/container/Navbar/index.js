@@ -101,7 +101,7 @@ export default function Navbar(props) {
 		<Row className={styles.header}>
 			<Row className={styles.navbar}>
 				<Link href="/">
-					<img src="/images/logo.svg" alt="favoland logo" />
+					<img src="/images/logo1.svg" alt="favoland logo" />
 				</Link>
 
 				<Col className={styles.actionbtn}>
@@ -154,7 +154,7 @@ export default function Navbar(props) {
 						className="navbar-link pe-2"
 						href={'https://sellers.favoland.com/'}
 					>
-						Retailer
+						Supplier Sign 
 					</Link>
 					{status !== 'authenticated' && (
 						<Link className="navbar-link pe-2" href={'/signup'}r>
